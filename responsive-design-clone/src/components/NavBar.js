@@ -1,6 +1,6 @@
 import './NavBar.css'
 
-const navBar = ({ links }) => {
+const NavBar = ({ links }) => {
 
     return(
         <div>
