@@ -1,15 +1,22 @@
 import './NavBar.css'
 
-const NavBar = ({ links }) => {
+const NavBar = ({ links, toggleMenu, isMenuOpen }) => {
+    const menuClass = isMenuOpen ? 'menu-open' : '';
 
     return(
         <div>
             <nav>
-                <h1>Start Bootstrap</h1>
+                <img src="https://startbootstrap.github.io/startbootstrap-agency/assets/img/navbar-logo.svg"/>
                 <ul>
                     {links.map(link => <li>{link}</li>)}
                 </ul>
+                <button onClick={toggleMenu}>MENU</button>
             </nav>
+
+            <menu className={menuClass}>
+            <img className={isMenuOpen ? 'menu-text' : 'hidden'} src="https://startbootstrap.github.io/startbootstrap-agency/assets/img/navbar-logo.svg"/>
+            <ul className={isMenuOpen ? 'menu-text' : 'hidden'}>{links.map(link => <li>{link}</li>)}</ul>
+            </menu>
         </div>
     )
 }

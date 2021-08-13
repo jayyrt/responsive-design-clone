@@ -7,17 +7,24 @@ class App extends React.Component {
     super()
 
     this.state = {
-      navLinks: ['services', 'portfolio', 'about', 'team', 'contact']
+      navLinks: ['SERVICE', 'PORTFOLIO', 'ABOUT', 'TEAM', 'CONTACT'],
+      isMenuOpen: false,
     }
   }
 
+  toggleMenu = () => {
+    this.setState({ isMenuOpen: !this.state.isMenuOpen })
+  }
+
   render(){
-    const { navLinks } = this.state;
+    const { navLinks, isMenuOpen } = this.state;
 
     return (
     <div className="App">
       <NavBar
-      links = {navLinks}
+      toggleMenu = {this.toggleMenu}
+      isMenuOpen = {isMenuOpen}
+      links = {navLinks} 
       />
     </div>
   );
