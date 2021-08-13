@@ -6,17 +6,68 @@ nav{
     align-items: center;
 }
 
+ul:hover{
+    color: goldenrod;
+}
+
 ul{
+    cursor: pointer;
     display: flex;
     list-style: none;
     justify-content: space-around;
     width: 35%;
+    color: white;
 }
 
 img{
-height: 7vh;
+    height: 7vh;
+}
+
+button{
+     background-color: transparent;
+     cursor: pointer;
+     border: 2px solid gray;
+     border-radius: 5%;
+     color: gray;
+     display: none;
+     padding: 7px;
+
 }
 
 menu{
+    position: fixed;
+    height: 100vh;
+    width: 300px;
+    background-color: transparent;
+    border: 1px solid black;
+    margin: 0;
+    top: 0;
+    left: -300px;
+    padding: 0;
+    transition-property: left;
+    transition-duration: 1s;
+}
 
+.menu-open{
+    left: 0;
+    display: block;
+}
+
+.menu-text{
+    display: block;
+}
+
+@media(max-width: 900px){
+    ul{
+        width: 50%;
+    }
+}
+
+@media(max-width: 600px){
+    ul{
+        display: none;
+    }
+    button{
+        display: block;
+    }
 }

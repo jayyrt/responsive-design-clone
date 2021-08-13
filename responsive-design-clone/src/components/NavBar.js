@@ -14,7 +14,6 @@ const NavBar = ({ links, toggleMenu, isMenuOpen }) => {
             </nav>
 
             <menu className={menuClass}>
-            <img className={isMenuOpen ? 'menu-text' : 'hidden'} src="https://startbootstrap.github.io/startbootstrap-agency/assets/img/navbar-logo.svg"/>
             <ul className={isMenuOpen ? 'menu-text' : 'hidden'}>{links.map(link => <li>{link}</li>)}</ul>
             </menu>
         </div>

@@ -1,13 +1,14 @@
 import './App.css';
 import React from 'react';
 import NavBar from './components/NavBar';
+import Body from './components/Body'
 
 class App extends React.Component {
   constructor(){
     super()
 
     this.state = {
-      navLinks: ['SERVICE', 'PORTFOLIO', 'ABOUT', 'TEAM', 'CONTACT'],
+      navLinks: ['SERVICES', 'PORTFOLIO', 'ABOUT', 'TEAM', 'CONTACT'],
       isMenuOpen: false,
     }
   }
@@ -26,6 +27,7 @@ class App extends React.Component {
       isMenuOpen = {isMenuOpen}
       links = {navLinks} 
       />
+      <Body />
     </div>
   );
 }
