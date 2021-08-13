@@ -23,7 +23,7 @@ img{
     height: 7vh;
 }
 
-button{
+.menu-button{
      background-color: transparent;
      cursor: pointer;
      border: 2px solid gray;
@@ -67,7 +67,7 @@ menu{
     ul{
         display: none;
     }
-    button{
+    .menu-button{
         display: block;
     }
 }

@@ -5,12 +5,12 @@ const NavBar = ({ links, toggleMenu, isMenuOpen }) => {
 
     return(
         <div>
-            <nav>
+            <nav className="nav-bar">
                 <img src="https://startbootstrap.github.io/startbootstrap-agency/assets/img/navbar-logo.svg"/>
                 <ul>
                     {links.map(link => <li>{link}</li>)}
                 </ul>
-                <button onClick={toggleMenu}>MENU</button>
+                <button className='menu-button' onClick={toggleMenu}>MENU</button>
             </nav>
 
             <menu className={menuClass}>
